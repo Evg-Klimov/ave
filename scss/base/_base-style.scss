@@ -1,0 +1,94 @@
+*, 
+::before, 
+::after {
+	box-sizing: border-box;
+}
+
+.page {
+	min-width: 320px;
+	font-family: $font-stack;
+	height: 100%;
+	color: $gray;
+}
+
+.page,
+.list,
+.figure {
+	margin: 0;
+	padding: 0;
+}
+
+.img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+.link {
+	text-decoration: none;
+	display: inline-block;
+}
+
+.list {
+	list-style: none;
+}
+
+.container {
+	max-width: 1170px;
+	padding: 0 20px;
+	box-sizing: initial;
+	@include auto;
+}
+
+.wrapper--bg {
+	background: $alebaster url("../img/background/container.jpg") no-repeat center/cover;
+	margin-bottom: 60px;
+}
+
+.title {
+	font-size: 3rem;
+  color: #575153;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: .52em;
+	line-height: 1.125;
+	
+	&--weight {
+		font-weight: normal;
+	}
+}
+
+.subtitle,
+.small-subtitle {
+	margin-top: 0;
+	text-transform: uppercase;
+}
+
+.subtitle {	
+	line-height: 1.111;
+	font-size: rem(18);
+	color: $very-dark-grayish-pink;
+	margin-top: 0;
+	margin-bottom: 1.667em;
+}
+
+.small-subtitle {
+	font-size: rem(13);
+	color: $dove-gray;
+	line-height: 1.538;
+	margin-top: 0;
+	margin-bottom: 1.15em;
+
+	&--color {
+		color: $very-dark-grayish-pink;
+	}
+}
+
+.text {
+	font-family: "Roboto";
+	line-height: 1.467;
+	font-size: rem(15);
+	hyphens: auto;
+	margin-top: 0;
+}
+

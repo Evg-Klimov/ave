@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Кодировка -->
+  <meta charset="UTF-8" />
+  <!-- Описание страницы -->
+  <meta name="description" content="" />
+  <!-- Совместимость IE -->
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <!-- Адапатив -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Цвет мета-темы для Chrome и Oper телефон -->
+  <meta name="theme-color" content="#575153" />
+  <!-- Иконка сайта - телефоны?! -->
+  <!-- <link rel="apple-touch-icon" sizes="150x150" href="img/favicon.png" /> -->
+  <!-- Иконка сайта - пк?! -->
+  <!-- <link rel="icon" type="image/png" href="img/favicon.png" sizes="150x150" /> -->
+  <!-- Заголовок -->
+  <title>AVE</title>
+  <link rel="stylesheet" href="css/libs.min.css" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body class="page page-home">
+  <!-- Корзина, выбор валют, кнопка входа и регистрации -->
+  <div class="top-line">
+    <div class="top-line__container">
+
+      <!-- Блок с выбором валюты -->
+      <div class="currency">
+        <span class="currency__title">Currency :</span>
+        <div class="currency__container">
+          <select name="currency" id="currency" class="currency__select">
+            <option value="gbp" class="currency__option">gbp</option>
+            <option value="usd" class="currency__option">usd</option>
+            <option value="eur" class="currency__option">eur</option>
+          </select>
+          <span class="currency__arrow"><i class="fas fa-chevron-down"></i></span>
+        </div>
+      </div>
+
+      <!-- Блок с регистрацией/входом пользователя -->
+      <div class="user-login user-login--margin-left">
+        <ul class="list user-login__list">
+          <li class="user-login__item">
+            <a href="./registration.html" class="link top-line__link">Registr</a>
+          </li>
+          <li class="user-login__item">
+            <a href="./registration.html" class="link top-line__link">Sign In</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Корзина пользователя -->
+      <div class="shopping-cart shopping-cart--margin-left">
+        <a href="#" class="link shopping-cart__link top-line__link">
+          <i class="fas fa-shopping-cart shopping-cart__icon"></i>
+          empty
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Фоновая картинка -->
+  <div class="wrapper--bg">
+
+    <!-- Шапка -->
+    <header class="header">
+      <div class="header__content">
+
+        <!-- Логотип -->
+        <div class="logo">
+          <a href="./index.html" class="link header__link">
+            <span class="logo__link--weight">avenue</span>
+            fashion
+          </a>
+        </div>
+
+        <!-- Навигация -->
+        <nav class="navigation">
+          <input type="checkbox" id="toggle-menu-input" class="toggle-menu__input" />
+          <label for="toggle-menu-input" class="toggle-menu__btn">
+            <span class="toggle-menu__line toggle-menu__line--top"></span>
+            <span class="toggle-menu__line toggle-menu__line--middle"></span>
+            <span class="toggle-menu__line toggle-menu__line--bottom"></span>
+          </label>
+          <ul class="list header-menu">
+            <li class="header-menu__item">
+              <span class="link header-menu__link header__link">
+                mens
+                <i class="fas fa-chevron-down header-menu__icon"></i>
+              </span>
+
+              <!-- Обертка подменю -->
+              <div class="header-menu__wrapper">
+
+                <!-- Блок с подменю из двух колонок -->
+                <div class="header-menu__cols-container">
+
+                  <!-- Подменю колонка - 1 -->
+                  <div class="header-menu__col">
+                    <h4 class="header-menu__subtitle">Casuals</h4>
+
+                    <!-- Подменю -->
+                    <ul class="list dropdown-menu">
+                      <li class="dropdown-menu__item">
+                        <a href="./product-mens.html" class="link dropdown-menu__link">Jackets</a>
+                      </li>
+                      <li class="dropdown-menu__item">
+                        <a href="./product-mens.html" class="link dropdown-menu__link">Hoodies & Sweatshirts</a>
+                      </li>
+                      <li class="dropdown-menu__item">
+                        <a href="./product-mens.html" class="link dropdown-menu__link">Polo Shirts</a>
+                      </li>
+                      <li class="dropdown-menu__item">
+                        <a href="./product-mens.html" class="link dropdown-menu__link">Sportswear</a>
+                      </li>
+                      <li class="dropdown-menu__item">
+                        <a href="./product-mens.html" class="link dropdown-menu__link">Trouser & Chinos</a>
+                      </li>
+                      <li class="dropdown-menu__item">
+                        <a href="./product-mens.html" class="link dropdown-menu__link">T-Shirts</a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Подменю колонка - 2 -->
+                  <div class="header-menu__col">
+                    <h4 class="header-menu__subtitle">formal</h4>
+
+                    <!-- Подменю -->
+                    <ul class="list dropdown-menu">
+                      <li class="dropdown-menu__item">
+                        <a href="./product-mens.html" class="link dropdown-menu__link">Jackets</a>
+                      </li>
+                      <li class="dropdown-menu__item">
+                        <a href="./product-mens.html" class="link dropdown-menu__link">Shirts</a>
+                      </li>
+                      <li class="dropdown-menu__item">
+                        <a href="./product-mens.html" class="link dropdown-menu__link">Suits</a>
+                      </li>
+                      <li class="dropdown-menu__item">
+                        <a href="./product-mens.html" class="link dropdown-menu__link">Trousers</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Баннер -->
+                <div class="header-menu__banner">
+                  <p class="header-menu__banner-title header-menu__banner-title--weight">autumn sale!</p>
+                  <p class="header-menu__banner-title">up to 50% off</p>
+                </div>
+              </div>
+
+            </li>
+            <li class="header-menu__item">
+              <span class="link header-menu__link header__link">
+                womens
+                <i class="fas fa-chevron-down header-menu__icon"></i>
+              </span>
+
+              <!-- Обертка подменю -->
+              <div class="header-menu__wrapper">
+
+                <!-- Блок с подменю из двух колонок -->
+                <div class="header-menu__cols-container">
+
+                  <!-- Подменю колонка - 1 -->
+                  <div class="header-menu__col">
+                    <h4 class="header-menu__subtitle">Casuals</h4>
+
+                    <!-- Подменю -->
+                    <ul class="list dropdown-menu">
+                      <li class="dropdown-menu__item">
+                        <a href="./product-womans.html" class="link dropdown-menu__link">Jackets</a>
+                      </li>
+                      <li class="dropdown-menu__item">
+                        <a href="./product-womans.html" class="link dropdown-menu__link">Hoodies & Sweatshirts</a>
+                      </li>
+                      <li class="dropdown-menu__item">
+                        <a href="./product-womans.html" class="link dropdown-menu__link">Polo Shirts</a>
+                      </li>
+                      <li class="dropdown-menu__item">
+                        <a href="./product-womans.html" class="link dropdown-menu__link">Vests</a>
+                      </li>
+                      <li class="dropdown-menu__item">
+                        <a href="./product-womans.html" class="link dropdown-menu__link">Trouser & Chinos</a>
+                      </li>
+                      <li class="dropdown-menu__item">
+                        <a href="./product-womans.html" class="link dropdown-menu__link">Jeans</a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Подменю колонка - 2 -->
+                  <div class="header-menu__col">
+                    <h4 class="header-menu__subtitle">footwear</h4>
+
+                    <!-- Подменю -->
+                    <ul class="list dropdown-menu">
+                      <li class="dropdown-menu__item">
+                        <a href="./product-womans.html" class="link dropdown-menu__link">Ballet Shoes</a>
+                      </li>
+                      <li class="dropdown-menu__item">
+                        <a href="./product-womans.html" class="link dropdown-menu__link">Boots</a>
+                      </li>
+                      <li class="dropdown-menu__item">
+                        <a href="./product-womans.html" class="link dropdown-menu__link">Sneakers</a>
+                      </li>
+                      <li class="dropdown-menu__item">
+                        <a href="./product-womans.html" class="link dropdown-menu__link">Shoes</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Баннер -->
+                <div class="header-menu__banner">
+                  <p class="header-menu__banner-title header-menu__banner-title--weight">autumn sale!</p>
+                  <p class="header-menu__banner-title">up to 50% off</p>
+                </div>
+              </div>
+
+            </li>
+            <li class="header-menu__item">
+              <a href="./brand.html" class="link header-menu__link header__link">the brand</a>
+            </li>
+            <li class="header-menu__item">
+              <a href="./local.html" class="link header-menu__link header__link">local stores</a>
+            </li>
+            <li class="header-menu__item">
+              <span class="header-menu__link header__link link">
+                look book
+                <i class="fas fa-chevron-down header-menu__icon"></i>
+              </span>
+
+              <!-- Обертка подменю -->
+              <div class="header-menu__wrapper header-menu__wrapper--position">
+
+                <!-- Блок с подменю из двух колонок -->
+                <div class="header-menu__cols-container">
+
+                  <!-- Подменю колонка - 1 -->
+                  <div class="header-menu__col">
+                    <h4 class="header-menu__subtitle">our lookbooks</h4>
+
+                    <!-- Подменю -->
+                    <ul class="list dropdown-menu">
+                      <li class="dropdown-menu__item">
+                        <a href="./look-book.html" class="link dropdown-menu__link">Latests Posts(mixed)</a>
+                      </li>
+                      <li class="dropdown-menu__item">
+                        <a href="./look-book.html" class="link dropdown-menu__link">man's lookbook</a>
+                      </li>
+                      <li class="dropdown-menu__item">
+                        <a href="./look-book.html" class="link dropdown-menu__link">women's lookbook</a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Подменю колонка - 2 -->
+                  <div class="header-menu__col">
+                    <h4 class="header-menu__subtitle">your lookbooks</h4>
+
+                    <!-- Подменю -->
+                    <ul class="list dropdown-menu">
+                      <li class="dropdown-menu__item">
+                        <a href="./look-book.html" class="link dropdown-menu__link">view and edit</a>
+                      </li>
+                      <li class="dropdown-menu__item">
+                        <a href="./look-book.html" class="link dropdown-menu__link">share</a>
+                      </li>
+                      <li class="dropdown-menu__item">
+                        <a href="./look-book.html" class="link dropdown-menu__link">delete</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Баннер -->
+                <div class="header-menu__banner">
+                  <p class="header-menu__banner-title header-menu__banner-title--weight">autumn sale!</p>
+                  <p class="header-menu__banner-title">up to 50% off</p>
+                </div>
+              </div>
+
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Форма поиска -->
+        <form action="#" class="search-form">
+          <label for="search" class="search-form__label">
+            <input autocomplete="off" class="search-form__field" id="search" placeholder="Search..." type="text">
+          </label>
+          <i class="fas fa-search search-form__icon"></i>
+        </form>
+      </div>
+    </header>
+
+    <!--  -->
+    <div class="collection">
+      <div class="collection__container">
+        <div class="collection__large-text">
+          <span class="collection__text">a</span>
+          <span class="collection__text">v</span>
+          <span class="collection__text">e</span>
+        </div>
+
+        <div class="collection__price-btn">
+          <button type="submit" class="btn collection__btn">shop men’s collection
+            <span class="btn__bg btn__bg--one"></span>
+            <span class="btn__bg btn__bg--two"></span>
+            <span class="btn__bg btn__bg--three"></span>
+            <span class="btn__bg btn__bg--four"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Товары -->
+  <div class="products">
+    <div class="products__container">
+
+      <!-- Навигация по табам -->
+      <ul class="products__tabs-list list">
+        <li class="products__tabs-button" data-value="1">popular</li>
+        <li class="products__tabs-button" data-value="2">new arrivals</li>
+        <li class="products__tabs-button" data-value="3">best sellers</li>
+      </ul>
+
+      <div class="products__tabs-content">
+
+        <!-- Контент табов -->
+        <div class="products__tab">
+
+          <!-- Колонка с товарами -->
+          <div class="products__col">
+
+            <!-- Ряд с товарами -->
+            <div class="products__row products__row--mb">
+
+              <!-- Карточка товара -->
+              <figure class="figure products__card products__card--mr">
+                <img class="img products__img" src="./img/home-page-products/col-1-small-image-1.jpg"
+                  alt="Мужской свитер" />
+
+                <!-- Цена -->
+                <div class="products__price price">
+                  <span class="price__current"><span class="price__currency price__currency--small">£</span>89.99</span>
+                </div>
+
+                <!-- Кнопка для открытия Описания -->
+                <input id="products__input" type="checkbox" class="products__input">
+                <label for="products__input" class="products__descriptiont-btn">
+                  <i class="fas fa-info products__descriptiont-btn-icon"></i>
+                </label>
+
+                <!-- Описание товара -->
+                <figcaption class="products__descriptiont">
+                  <h4 class="products__descriptiont-title">men's black jacket
+                    <span class="price__current"><span
+                        class="price__currency price__currency--small">£</span>34.79</span>
+                  </h4>
+                  <p class="products__descriptiont-text">
+                    Classic casual jacket for men's.
+                    <span class="products__descriptiont-text--full-width">100% cotton.</span>
+                  </p>
+
+                  <!-- Добавления в корзину и тд. -->
+                  <ul class="list products__description-aside-action">
+                    <li class="products__description-aside-item">
+                      <i class="fas fa-shopping-cart products__descriptiont-icon"></i>
+                    </li>
+                    <li class="products__description-aside-item">
+                      <i class="fas fa-heart products__descriptiont-icon"></i>
+                    </li>
+                    <li class="products__description-aside-item">
+                      <i class="fas fa-compress-alt products__descriptiont-icon"></i>
+                    </li>
+                  </ul>
+                </figcaption>
+              </figure>
+
+              <!-- Карточка товара -->
+              <figure class="figure products__card">
+                <img class="img products__img" src="./img/home-page-products/col-1-small-image-2.jpg"
+                  alt="Женская майка" />
+
+                <!-- Цена -->
+                <div class="products__price price">
+                  <span class="price__current"><span class="price__currency price__currency--small">£</span>47.50</span>
+                </div>
+
+                <!-- Кнопка для открытия Описания -->
+                <input id="products__input-1" type="checkbox" class="products__input">
+                <label for="products__input-1" class="products__descriptiont-btn">
+                  <i class="fas fa-info products__descriptiont-btn-icon"></i>
+                </label>
+
+                <!-- Описание товара -->
+                <figcaption class="products__descriptiont">
+                  <h4 class="products__descriptiont-title">Womens burnt white casual tee
+                    <span class="price__current"><span
+                        class="price__currency price__currency--small">£</span>34.79</span>
+                  </h4>
+                  <p class="products__descriptiont-text">
+                    Classic casual t-shirt for women on the move.
+                    <span class="products__descriptiont-text--full-width">100% cotton.</span>
+                  </p>
+
+                  <!-- Добавления в корзину и тд. -->
+                  <ul class="list products__description-aside-action">
+                    <li class="products__description-aside-item">
+                      <i class="fas fa-shopping-cart products__descriptiont-icon"></i>
+                    </li>
+                    <li class="products__description-aside-item">
+                      <i class="fas fa-heart products__descriptiont-icon"></i>
+                    </li>
+                    <li class="products__description-aside-item">
+                      <i class="fas fa-compress-alt products__descriptiont-icon"></i>
+                    </li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+
+            <!-- Ряд с товарами -->
+            <div class="priducts__row">
+
+              <!-- Карточка товара -->
+              <figure class="figure products__card">
+                <img class="img products__img" src="./img/home-page-products/col-1-large-image.jpg"
+                  alt="Мужской свитер" />
+
+                <!-- Цена -->
+                <div class="products__price price">
+                  <span class="price__current"><span class="price__currency price__currency--small">£</span>69.95</span>
+                </div>
+
+                <!-- Кнопка для открытия Описания -->
+                <input id="products__input-2" type="checkbox" class="products__input">
+                <label for="products__input-2" class="products__descriptiont-btn">
+                  <i class="fas fa-info products__descriptiont-btn-icon"></i>
+                </label>
+
+                <!-- Описание товара -->
+                <figcaption class="products__descriptiont">
+                  <h4 class="products__descriptiont-title">blue men's jacket
+                    <span class="price__current"><span
+                        class="price__currency price__currency--small">£</span>34.79</span>
+                  </h4>
+                  <p class="products__descriptiont-text">
+                    Classic casual blue men's jacket
+                    <span class="products__descriptiont-text--full-width">100% cotton.</span>
+                  </p>
+
+                  <!-- Добавления в корзину и тд. -->
+                  <ul class="list products__description-aside-action">
+                    <li class="products__description-aside-item">
+                      <i class="fas fa-shopping-cart products__descriptiont-icon"></i>
+                    </li>
+                    <li class="products__description-aside-item">
+                      <i class="fas fa-heart products__descriptiont-icon"></i>
+                    </li>
+                    <li class="products__description-aside-item">
+                      <i class="fas fa-compress-alt products__descriptiont-icon"></i>
+                    </li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <!-- Колонка с товарами -->
+          <div class="products__col">
+
+            <!-- Ряд с товарами -->
+            <div class="priducts__row products__row--mb">
+
+              <!-- Карточка товара -->
+              <figure class="figure products__card">
+                <img class="img products__img" src="./img/home-page-products/col-2-large-image.jpg"
+                  alt="Мужской свитер" />
+
+                <!-- Цена -->
+                <div class="products__price price">
+                  <span class="price__old"><span class="price__currency price__currency--small">£</span>107</span>
+                  <span class="price__current"><span class="price__currency price__currency--small">£</span>89.99</span>
+                </div>
+
+                <!-- Кнопка для открытия Описания -->
+                <input id="products__input-3" type="checkbox" class="products__input">
+                <label for="products__input-3" class="products__descriptiont-btn">
+                  <i class="fas fa-info products__descriptiont-btn-icon"></i>
+                </label>
+
+                <!-- Описание товара -->
+                <figcaption class="products__descriptiont">
+                  <h4 class="products__descriptiont-title">men's pullover
+                    <span class="price__current"><span
+                        class="price__currency price__currency--small">£</span>34.79</span>
+                  </h4>
+                  <p class="products__descriptiont-text">
+                    Сalssic black men's pullover.
+                    <span class="products__descriptiont-text--full-width">100% cotton.</span>
+                  </p>
+
+                  <!-- Добавления в корзину и тд. -->
+                  <ul class="list products__description-aside-action">
+                    <li class="products__description-aside-item">
+                      <i class="fas fa-shopping-cart products__descriptiont-icon"></i>
+                    </li>
+                    <li class="products__description-aside-item">
+                      <i class="fas fa-heart products__descriptiont-icon"></i>
+                    </li>
+                    <li class="products__description-aside-item">
+                      <i class="fas fa-compress-alt products__descriptiont-icon"></i>
+                    </li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+
+            <!-- Ряд с товарами -->
+            <div class="products__row">
+
+              <!-- Карточка товара-->
+              <figure class="figure products__card products__card--mr">
+                <img class="img products__img" src="./img/home-page-products/col-2-small-image-1.jpg"
+                  alt="Женская майка" />
+
+                <!-- Цена -->
+                <div class="products__price price">
+                  <span class="price__current"><span class="price__currency price__currency--small">£</span>29.99</span>
+                </div>
+
+                <!-- Кнопка для открытия Описания -->
+                <input id="products__input-4" type="checkbox" class="products__input">
+                <label for="products__input-4" class="products__descriptiont-btn">
+                  <i class="fas fa-info products__descriptiont-btn-icon"></i>
+                </label>
+
+                <!-- Описание товара -->
+                <figcaption class="products__descriptiont">
+                  <h4 class="products__descriptiont-title">Womens burnt orange casual tee
+                    <span class="price__current"><span
+                        class="price__currency price__currency--small">£</span>34.79</span>
+                  </h4>
+                  <p class="products__descriptiont-text">
+                    Classic casual t-shirt for women on the move.
+                    <span class="products__descriptiont-text--full-width">100% cotton.</span>
+                  </p>
+
+                  <!-- Добавления в корзину и тд. -->
+                  <ul class="list products__description-aside-action">
+                    <li class="products__description-aside-item">
+                      <i class="fas fa-shopping-cart products__descriptiont-icon"></i>
+                    </li>
+                    <li class="products__description-aside-item">
+                      <i class="fas fa-heart products__descriptiont-icon"></i>
+                    </li>
+                    <li class="products__description-aside-item">
+                      <i class="fas fa-compress-alt products__descriptiont-icon"></i>
+                    </li>
+                  </ul>
+                </figcaption>
+              </figure>
+
+              <!-- Карточка товара -->
+              <figure class="figure products__card">
+                <img class="img products__img" src="./img/home-page-products/col-2-small-image-2.jpg"
+                  alt="Женская майка" />
+
+                <!-- Цена -->
+                <div class="products__price price">
+                  <span class="price__current"><span class="price__currency price__currency--small">£</span>34.79</span>
+                </div>
+
+                <!-- Кнопка для открытия Описания -->
+                <input id="products__input-5" type="checkbox" class="products__input">
+                <label for="products__input-5" class="products__descriptiont-btn">
+                  <i class="fas fa-info products__descriptiont-btn-icon"></i>
+                </label>
+
+                <!-- Описание товара -->
+                <figcaption class="products__descriptiont">
+                  <h4 class="products__descriptiont-title">Womens dark green casual tee
+                    <span class="price__current"><span
+                        class="price__currency price__currency--small">£</span>34.79</span>
+                  </h4>
+                  <p class="products__descriptiont-text">
+                    Classic casual t-shirt for women on the move.
+                    <span class="products__descriptiont-text--full-width">100% cotton.</span>
+                  </p>
+
+                  <!-- Добавления в корзину и тд. -->
+                  <ul class="list products__description-aside-action">
+                    <li class="products__description-aside-item">
+                      <i class="fas fa-shopping-cart products__descriptiont-icon"></i>
+                    </li>
+                    <li class="products__description-aside-item">
+                      <i class="fas fa-heart products__descriptiont-icon"></i>
+                    </li>
+                    <li class="products__description-aside-item">
+                      <i class="fas fa-compress-alt products__descriptiont-icon"></i>
+                    </li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lookbook -->
+  <div class="lookbook">
+    <div class="lookbook__conteiner">
+
+      <!-- Блок с контентом -->
+      <div class="lookbook__item">
+
+        <!-- Картинка -->
+        <figure class="lookbook__image figure">
+          <img class="img" src="./img/home-page-lookbook/lookbook-image-1.png" alt="">
+        </figure>
+
+        <!-- Блок с описанием -->
+        <div class="lookbook__item-content">
+          <h2 class="title">
+            men's
+            <span class="title lookbook__title--weight">lookbook</span>
+          </h2>
+          <p class="lookbook__description text">Lorem ipsum dolor sit amet eras facilisis
+            consectetur adipiscing elit lor, integer lorem consecteur dignissim laciniqui.
+            Elementum metus facilisis ut phasellu.
+          </p>
+
+          <!-- Кнопка -->
+          <button class="btn lookbook__btn" type="submite">view now
+            <span class="btn__bg btn__bg--one"></span>
+            <span class="btn__bg btn__bg--two"></span>
+            <span class="btn__bg btn__bg--three"></span>
+            <span class="btn__bg btn__bg--four"></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="lookbook__item">
+
+        <!-- Картинка -->
+        <figure class="lookbook__image figure">
+          <img class="img" src="./img/home-page-lookbook/lookbook-image-2.png" alt="">
+        </figure>
+
+        <!-- Блок с описанием -->
+        <div class="lookbook__item-content">
+          <h2 class="title">
+            women's
+            <span class="title lookbook__title--weight">lookbook</span>
+          </h2>
+          <p class="lookbook__description text">Pellentesque habitant morbi tristique senectus et netus et malesuada
+            fames .
+            Pellentesque laoreet quis enim et mattis. Quisque interdum felis tellus.
+          </p>
+
+          <!-- Кнопка -->
+          <button class="btn lookbook__btn" type="submite">view now
+            <span class="btn__bg btn__bg--one"></span>
+            <span class="btn__bg btn__bg--two"></span>
+            <span class="btn__bg btn__bg--three"></span>
+            <span class="btn__bg btn__bg--four"></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="lookbook__item">
+
+        <!-- Картинка -->
+        <figure class="lookbook__image figure">
+          <img class="img" src="./img/home-page-lookbook/lookbook-image-3.png" alt="">
+        </figure>
+
+        <!-- Блок с описанием -->
+        <div class="lookbook__item-content">
+          <h2 class="title">
+            your
+            <span class="title lookbook__title--weight">lookbook</span>
+          </h2>
+          <p class="lookbook__description text">See an item you like and click the button to add it to your lookbook
+            where
+            you can create your own perfect look.
+            It’s like your own boutique!
+          </p>
+
+          <!-- Кнопка -->
+          <button class="btn lookbook__btn" type="submite">view now
+            <span class="btn__bg btn__bg--one"></span>
+            <span class="btn__bg btn__bg--two"></span>
+            <span class="btn__bg btn__bg--three"></span>
+            <span class="btn__bg btn__bg--four"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Футер -->
+  <footer class="footer footer--bg">
+    <div class="container">
+      <div class="footer__content">
+
+        <!-- Куча инфы -->
+        <div class="footer__info">
+
+          <!-- Колонка со списком -->
+          <div class="footer__col">
+            <h3 class="footer__title">information</h3>
+            <ul class="list footer__list">
+              <li class="footer__list-item">
+                <a href="#" class="link footer__list-link">The brand</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="link footer__list-link">Local stores</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="link footer__list-link">Customer service</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="link footer__list-link">Privacy & cookies</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="link footer__list-link">Site map</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Колонка со списком -->
+          <div class="footer__col">
+            <h3 class="footer__title">Why buy from us</h3>
+            <ul class="list footer__list">
+              <li class="footer__list-item">
+                <a href="#" class="link footer__list-link">Shipping & returns</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="link footer__list-link">Secure shopping</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="link footer__list-link">Testimonials</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="link footer__list-link">Award winning</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="link footer__list-link">Ethical trading</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Колонка со списком -->
+          <div class="footer__col">
+            <h3 class="footer__title">Your account</h3>
+            <ul class="list footer__list">
+              <li class="footer__list-item">
+                <a href="#" class="link footer__list-link">Sign in</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="link footer__list-link">Register</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="link footer__list-link">View cart</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="link footer__list-link">View your lookbook</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="link footer__list-link">Track an order</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="link footer__list-link">Update information</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Колонка со списком -->
+          <div class="footer__col">
+            <h3 class="footer__title">Lookbook</h3>
+            <ul class="list footer__list">
+              <li class="footer__list-item">
+                <a href="#" class="link footer__list-link">Latest posts</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="link footer__list-link">Men’s lookbook</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="link footer__list-link">Women’s lookbook</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="link footer__list-link">Lookbooks RSS feed</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="link footer__list-link">View your lookbook</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="link footer__list-link">Delete your lookbook</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Колонка со списком -->
+          <div class="footer__col">
+            <h3 class="footer__title">contact details</h3>
+            <ul class="list footer__list">
+              <li class="footer__list-item footer__list-item--mb">
+                <address class="footer__address">Head Office: Avenue Fashion,</address>
+                <address class="footer__address">180-182 Regent Street, London.</address>
+              </li>
+              <li class="footer__list-item">
+                <a href="tel:0123-456-789" class="link footer__list-link">Telephone: 0123-456-789</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="mailto:support@yourwebsite.com" class="link footer__list-link">Email:
+                  support@yourwebsite.com</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Банеры -->
+        <div class="footer__banners">
+
+          <!-- Банер 1 -->
+          <div class="footer__banner">
+            <h2 class="footer__banner-title">
+              award winner
+              <span class="footer__banner-title footer__banner-title--weight">fashion awards 2016</span>
+            </h2>
+          </div>
+
+          <!-- Банер 2 -->
+          <div class="footer__banner footer__banner--flex">
+            <ul class="list footer__banner-list">
+              <li class="footer__banner-item">
+                <a href="#" class="link footer__banner-link">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="footer__banner-item">
+                <a href="#" class="link footer__banner-link">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li class="footer__banner-item">
+                <a href="#" class="link footer__banner-link">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+              <li class="footer__banner-item">
+                <a href="#" class="link footer__banner-link">
+                  <i class="fab fa-pinterest"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Копирайт -->
+    <div class="footer__copyright">
+      <div class="footer__conteiner footer__conteiner--flex">
+        <span class="footer__copyright-text">© 2016 Avenue Fashion™</span>
+
+        <div class="footer__copyright-author">
+          <span class="footer__copyright-text">Design by
+            <a class="link footer__copyright-link" href="https://www.robbydesigns.com/">RobbyDesigns.com</a>
+          </span>
+          <span class="footer__copyright-text">Dev by
+            <a class="link footer__copyright-link" href="https://www.lipsum.com/">Loremipsum.com</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

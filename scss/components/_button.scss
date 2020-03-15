@@ -1,0 +1,158 @@
+.btn,
+.btn-dark {
+	text-transform: uppercase;
+	color: $abbey;
+	background-color: transparent;
+	position: relative;
+	z-index: 1;
+	font-family: $font-stack;
+	border: 2px solid #737373;
+	font-size: rem(16);
+
+	&:hover {
+		color: $white;
+		transition: color .2s linear .3s, border-color .2s linear .1s;
+		cursor: pointer;
+	}
+}
+
+.btn-dark {
+	padding: 1.44em 2.06em 1.44em 3.94em; 
+	overflow: hidden;
+
+	&::before,
+	&::after {
+		@include pseudo;
+		top: 0;
+		z-index: -1;
+		background-color: $mine-shaft-51;
+		width: 70%;
+		height: 100%;
+		transition: transform .4s linear;
+	}
+
+	&::before {
+		left: -35px;		
+		transform: skew(45deg) translateX(-200px);		
+	}
+
+	&::after {
+		right: -35px;	
+		transform: skew(45deg) translateX(200px);		
+	}
+
+	&:hover::before,
+	&:hover::after {
+		transform: skew(45deg) translateX(0px);
+	}
+}
+
+.btn {
+	transition: color 0s linear .2s, border 0s linear .6s;
+	padding: 1.28em 2em;
+
+	&:hover {
+		border-color: $pure-cuan;
+	}
+
+	&:hover .btn__bg {
+		height: 100%;
+	}
+
+	&__bg {
+		background-color: $pure-cuan;
+		position: absolute;
+		height: 0;
+		width: 25.1%;
+		bottom: 0;
+		z-index: -1;
+		transition: height .2s linear;
+		bottom: 0;
+
+		&--one {
+			transition-delay: 0s;
+			left: 0;
+		}
+		
+		&--two {
+			left: 25%;
+			transition-delay: .1s;
+		}
+
+		&--three {
+			left: 50%;
+			transition-delay: .2s;
+		}
+
+		&--four {
+			left: 75%;
+			transition-delay: .3s;
+		}
+	}
+}
+
+.toggle-menu {
+	display: none;
+
+	@media (max-width: 1440px) {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__input {
+		display: none;
+
+		&:checked + .toggle-menu__btn > .toggle-menu__line--bottom {
+			transform: rotate(45deg);
+			opacity: 0;
+		}
+
+		&:checked + .toggle-menu__btn > .toggle-menu__line--top {
+			transform: rotate(45deg) translateY(-3px);	
+		}
+
+		&:checked + .toggle-menu__btn > .toggle-menu__line--middle {
+			transform: rotate(495deg) translateY(4px);  
+		}
+
+		&:checked ~ .header-menu{
+			opacity: 1;
+			visibility: visible;
+			transform: rotateX(0deg);
+			transition: 
+									opacity .5s linear .2s, 
+									transform .5s linear .2s, 
+									visibility .5s linear .2s;
+		}
+	}
+
+	&__btn {
+		width: 30px;
+		height: 20px;
+		position: relative;
+		display: none;
+		margin: 0 auto;
+
+		@media (max-width: 1440px) {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+	}
+
+	&__line {
+		width: 100%;
+		height: 3px;
+		background-color: $mine-shaft-51;
+		transition: all .5s linear;
+
+		&--top {
+			transform-origin: 4px 0px;
+		}
+
+		&--bottom {
+			transform-origin: bottom right;
+		}
+	}
+}

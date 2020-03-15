@@ -1,0 +1,210 @@
+//* Навигация *//
+.navigation {
+	margin-left: auto;
+	margin-right: 110px;
+	position: relative;
+	z-index: 10;
+	perspective: 1000px;
+	transform-style: preserve-3d;
+	
+	@media (max-width: 1440px) {
+		margin: 0;
+		max-width: 500px;
+		width: 100%;
+	}
+
+	@media (max-width: 768px) {
+		order: 3;
+		margin-top: 10px;
+	}
+}
+
+//* Cписок *//
+.header-menu {
+	display: flex;
+	align-items: center;
+
+	@media (max-width: 1440px) {
+		flex-direction: column;
+		background-color: $mine-shaft-51;
+		position: absolute;
+		left: 0;
+		top: 35px;
+		width: 100%;
+		transition: 
+								opacity .5s linear, 
+								transform .5s linear, 
+								visibility .5s linear;
+		transform-origin: top center;
+		transform: rotateX(-90deg);
+		opacity: 0;
+		visibility: hidden;
+	}
+	//* Элементы списка *//
+	&__item {
+		position: relative;
+		@media (max-width: 1440px) {
+			width: 100%;
+			text-align: center;
+		}
+		//* Показываем подменю при наведении *//
+		&:hover .header-menu__wrapper {
+			opacity: 1;
+			visibility: visible;
+			height: auto;
+			padding: 10px;
+			transition: 
+									opacity .2s linear,
+									visibility .2s linear;
+		}
+		//* Убираем отступы у первого элемента списка *//
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+
+	&__icon,
+	&__link {
+		transition: all .2s ease-in;
+	}
+	//* Ссылки *//
+	&__link {
+		@include font-size(13);
+		padding: 2em;
+		cursor: pointer;
+
+		@media (max-width: 1440px) {
+			color: #989898;
+			display: block;
+			transition: background-color .2s linear;
+
+			&:hover {
+				background-color: $abbey;
+			}
+		}
+		//* Меняем цвет иконок и ссылок при наведении *//
+		&:hover,
+		&:hover .header-menu__icon {
+			color: $pure-cuan;
+		}
+	}
+	//* Иконки "стрелочки" *//
+	&__icon {
+		position: absolute;
+		bottom: 5px;
+    left: 27px;
+		color: #989898;
+
+		@media (max-width: 1440px) {
+			position: relative;
+			bottom: initial;
+			left: 5px;
+		}
+	}
+	//* Обертка для под-меню и баннера *//
+	&__wrapper {
+		width: 400px;
+		background-color: $alebaster;
+		box-shadow: 0px 17px 24px 0px rgba(0, 0, 0, .24);
+		position: absolute;
+		z-index: 10;
+		left: 27px;
+		top: 100%;
+		padding: 25px;
+		box-sizing: initial;
+		
+		//* Скрываем подменю *//
+		opacity: 0;
+		visibility: hidden;	
+
+		@media (max-width: 1440px) {
+			position: relative;
+			left: 0;
+			width: auto;
+			height: 0px;
+			box-shadow: none;
+			padding: 0;
+			transition: all .1s linear;
+		}
+		//* Позиционируем элементы подменю справа *//
+		&--position {
+			right: 24px;
+			left: initial;
+
+			@media (max-width: 1440px) {
+				right: 0;
+			}
+		}
+	}
+	//* Контеинер колонок с под-меню *//
+	&__cols-container {
+		display: flex;
+		margin-bottom: 60px;
+
+		&--center {
+			justify-content: center;
+		}
+
+		@media (max-width: 1440px) {
+			margin-bottom: 0px;	
+		}
+	}
+	//* Колонока с под-меню *//
+	&__col {
+		flex: 1 1 50%;
+		text-align: center;
+	}
+	//* Заголовок для под-меню *//
+	&__subtitle {
+		color: #575153;
+		@include font-size(12);
+		text-transform: uppercase;
+		margin: 0 0 2.50em 0;
+	}
+	//* Баннер *//
+	&__banner {
+		background-color: $mine-shaft-51;
+		text-align: center;
+		padding: 53px 0; 
+		//* Скрываем баннер *//
+		@media (max-width: 1440px) {
+			display: none;
+		}
+	}
+	//* Надпись в банере *//
+	&__banner-title {
+		color: $white;
+		@include font-size(36);
+		text-transform: uppercase;
+		line-height: 1.333;
+		margin: 0;
+		//* Жирный шрифт *//
+		&--weight {
+			font-weight: bold;
+		}
+	}
+}
+
+//* Подменю *//
+.dropdown-menu {
+
+	//* Элементы списка *//
+	&__item {
+		margin-bottom: 15px;
+		//* У последнего элемента убираем отступы снизу *//
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	//* Ссылки в под-меню *//
+	&__link {
+		@include font-size(14);
+		color: $dove-gray;
+		transition: color .2s ease-in;
+		text-transform: capitalize;
+		//* Меняем цвет ссылок при наведении *//
+		&:hover{
+			color: $pure-cuan;
+		}
+	}
+}

@@ -1,0 +1,188 @@
+.footer {
+
+	&--bg {
+		background-color: $alebaster;
+	}
+	
+	&__conteiner {
+		max-width: 1170px;
+		padding: 0 20px;
+		box-sizing: initial;
+		@include auto;
+
+		&--flex {
+			display: flex;
+
+			@media (max-width: 425px) {
+				display: block;
+				text-align: center;
+			}
+		}
+	}
+
+	&__content {
+		padding: 56px 0 60px 0;
+	}
+
+	&__info {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 65px;
+
+		@media (max-width: 930px) {
+			flex-wrap: wrap;
+			text-align: center;
+		}
+	}
+	//* Колонки со списками *//
+	&__col {
+		flex: 1 1 240px;
+
+		@media (max-width: 1440px) {
+			flex: 1 1 50%;
+		}
+
+		@media (max-width: 930px) {
+			margin-bottom: 30px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		@media (max-width: 375px) {
+			flex: 1 1 100%;
+		}
+	}
+	//* Стили для заголовка *//
+	&__title {
+		font-size: rem(13);
+		text-transform: uppercase;
+		color: $very-dark-grayish-pink;
+		margin-top: 0;
+		margin-bottom: 2.62em;
+	}
+	//* Элементы списка в блоке с "кучей инфы)"*//
+	&__list-item {
+		margin-bottom: 15px;
+			//* Убираем отступы у последнего элемента *//
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	//* Ссылки списка в блоке с "кучей инфы)"*//
+	&__list-link {
+		transition: color .2s linear;
+
+		&:hover {
+			color: $pure-cuan;
+		}
+	}
+
+	&__list-link,
+	&__address {
+		font-size: rem(14);
+		color: $dove-gray;
+	}
+
+	&__banners{
+		display: flex;
+		justify-content: space-between;
+
+		@media (max-width: 768px) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	//* Стили для баннера *//
+	&__banner {
+		background-color: $mine-shaft-51;
+		max-width: 570px;
+		width: 100%;
+		text-align: center;
+		padding: 64px 0;
+
+		@media (max-width: 1024px) {
+			padding: 34px 0;
+		}
+		//* Выравниваем иконки по центру во втором баннере и меняем цвет фона *//
+		&--flex	 {
+			background-color: $pure-cuan;
+			display: flex;
+    	justify-content: center;
+			align-items: center;
+			margin-left: 30px;
+
+			@media (max-width: 768px) {
+				margin-left: 0px;
+				margin-top: 30px;
+				padding: 75.5px 0;
+			}
+
+			@media (max-width: 425px) {
+				padding: 66px 0;
+			}
+		}
+	}
+	//* Заголовок в баннере *//
+	&__banner-title {
+		color: $white;
+		font-size: rem(36);
+		text-transform: uppercase;
+		line-height: 1.333;
+
+		@media (max-width: 1024px) {
+			font-size: rem(26);
+		}
+
+		@media (max-width: 425px) {
+			font-size: rem(20);
+		}
+		//* Меняем жирность шрифта и делаем блочным *//
+		&--weight {
+			font-weight: normal;
+			display: block;
+		}
+	}
+	//* Элементы списка соц.сетей в баннере*//
+	&__banner-item {
+		display: inline-block;
+		margin-right: 50px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__banner-link {
+		font-size: rem(36);
+		color: $white;
+
+		@media (max-width: 1024px) {
+			font-size: rem(26);
+		}
+
+		@media (max-width: 425px) {
+			font-size: rem(20);
+		}
+	}
+
+	&__copyright {
+		background-color: $mine-shaft-51;
+		padding: 17px 0;
+	}
+
+	&__copyright-link,
+	&__copyright-text {
+		color: #999;
+		font-size: rem(13);
+	}
+
+	&__copyright-author {
+		margin-left: auto;
+
+		@media (max-width: 425px) {
+			margin-top: 10px;
+		}
+	}
+}

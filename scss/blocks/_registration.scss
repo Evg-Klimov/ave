@@ -1,0 +1,148 @@
+.forms {
+
+	&__container {
+		padding-bottom: 120px;
+	}
+
+	&__main {
+		display: flex;
+		justify-content: space-between;
+
+		@media (max-width: 1024px) {
+			flex-direction: column;
+			align-items: center;
+			justify-content: initial;
+		}
+	}
+
+	&__login {
+		width: 50%;
+
+		@media (max-width: 1024px) {
+			max-width: 500px;
+			width: 100%;
+
+			&:first-child {
+				margin-bottom: 40px;
+			}
+		}
+
+		&--left {
+			padding-right: 35px;
+			border-right: 1px solid #eee;
+		}
+
+		&--right {
+			padding-left: 35px;
+		}
+
+		&--left,
+		&--right {
+			@media (max-width: 1024px) {
+				padding: 0;
+				border: none;
+			}
+		}
+	}
+	
+	&__line {
+		margin-bottom: 35px;
+
+		&:last-child {
+			margin-bottom: 0px;
+		}
+	}
+
+	&__line-action {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@media (max-width: 1024px) {
+			display: block;
+		}
+	}
+
+	&__line-item {
+		@media (max-width: 1024px) {
+			text-align: center;
+			margin-bottom: 15px;
+
+			&:last-child {
+				margin-bottom: 0px;
+			}
+		}
+
+		&--width {
+			width: 50%;
+
+			@media (max-width: 1024px) {
+				width: auto;
+			}
+		}
+	}
+
+	&__input,
+	&::placeholder {
+		font-size: rem(15);
+		font-family: "Montserrat";
+	}
+
+	&__input {
+		width: 100%;
+		padding: 14px 0 10px 14px; 
+		border: 1px solid #e7e7e7;
+		outline: none;
+
+		&:invalid:not(:placeholder-shown) {
+			border-color: #bb5465;
+			background-color: rgba(187, 84, 101, .2);
+		}
+
+		&::placeholder {
+			color: #989898;
+		}
+	}
+
+	&__checkbox {
+		display: none;
+
+		&:checked + .forms__custom-checkbox > .forms__custom-checkbox--check {
+			opacity: 1;
+		}
+	}
+
+	&__custom-checkbox {
+		display: inline-block;
+		position: relative;
+		width: 20px;
+		height: 20px;
+		border: 1px solid #e7e7e7;
+		vertical-align: sub;
+		margin-right: 15px;
+		cursor: pointer;
+		text-align: center;
+		vertical-align: bottom;
+		
+
+		&--check {
+			opacity: 0;
+			font-size: rem(12);
+			transition: opacity .2s linear;
+		}
+	}
+
+	&__subscription-text {
+		line-height: 1.2;
+
+		@media (max-width: 1024px) {
+			font-size: rem(13);
+		}
+	}
+
+	&__link {
+		color: $pure-cuan;
+		font-size: rem(15);
+	}
+}
+

@@ -1,0 +1,17 @@
+.price {
+
+	&__old {
+		text-decoration: line-through;
+		margin-right: .938em;
+	}
+
+	&__currency {
+		font-size: rem(20);
+		vertical-align: top;
+		text-transform: uppercase;
+
+		&--small {
+			font-size: rem(13);
+		}
+	}
+}

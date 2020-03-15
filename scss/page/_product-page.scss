@@ -1,0 +1,209 @@
+.product-card {
+
+	&__container {
+		padding-bottom: 120px;
+	}
+
+	&__grid {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 40px;
+
+		@media (max-width: 1440px) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	&__photo-slider {
+		width: 570px / 1170px * 100%;
+		margin-right: 30px;
+
+		@media (max-width: 1440px) {
+			max-width: 570px;
+			width: 100%;
+			margin-right: 0px;
+			margin-bottom: 50px;
+		}
+	}
+
+	//* Стили для блока с рейтингом *//
+	&__rating {
+		display: flex;
+		align-items: center;
+		margin-bottom: 20px;
+
+		@media (max-width: 768px) {
+			display: block;
+		}
+	}
+
+	//* Стили для блока с ценой *//
+	&__price {
+		margin-bottom: 33px;
+		font-size: rem(30);
+	}
+
+	//* Стили для информации о товаре *//
+	&__info {
+		margin-bottom: 30px;
+
+		&:last-child {
+			margin-bottom: 0px;
+		}
+	}
+
+	&__info-line {
+		margin-bottom: 20px;
+	}
+
+	&__info-label {
+		font-size: rem(15);
+		color: $very-dark-grayish-pink;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+	&__info-value {
+		font-size: rem(13);
+		color: #8c8c8c;
+
+		&--color {
+			color: $pure-cuan;
+		}
+	}
+
+	//* Стили для меню деталями о товаре *//
+	&__details {
+		padding-left: 15px;
+		margin-bottom: 35px;
+	}
+
+	&__details-item {
+		margin-bottom: 10px;
+
+		&:last-child {
+			margin-bottom: 0px;
+		}
+	}
+
+	//* Стили для блока с селектами *//
+	&__options {
+		display: flex;
+		margin-bottom: 50px;
+
+		@media (max-width: 490px) {
+			flex-direction: column;
+		}
+	}
+
+	&__options-item {
+		margin-right: 30px;
+
+		@media (max-width: 490px) {
+			margin-right: 0;
+			margin-bottom: 30px;
+		}
+
+		&:last-child {
+			margin-right: 0px;
+			margin-bottom: 0px;
+		}
+	}
+
+	&__select {
+		border-color: #e7e7e7;
+		font-family: $font-stack;
+		color: #989898;
+		padding: 13px 0;
+		cursor: pointer;
+
+		&--large {	
+			width: 170px;
+		}
+	}
+
+	&__btn-dark {
+		@media (max-width: 768px) {
+			font-size: rem(12);
+			padding: 1em;
+		}
+	}
+
+	//* Отступ для кнопки*//
+	&__btn-dark--mr {
+		margin-right: 25px;
+
+		@media (max-width: 768px) {
+			margin-right: 6px;
+		}
+	}
+
+	//* Стили для иконок в кнопках *//
+	&__icon {
+		position: absolute;
+		top: 20px;
+		left: 30px;
+		font-size: rem(20);
+
+		@media (max-width: 768px) {
+			display: none;
+		}
+	}
+
+	//* Стили для кнопок переключения слайдера *//
+	&__button-swiper {
+		color: $very-dark-grayish-pink;
+		width: 45px;
+		height: 55px;
+		transition: all .2s linear;
+
+		&:hover {
+			background-color: $pure-cuan;
+			color: $white;
+		}
+	
+		&::after {
+			font-size: rem(30);
+			font-weight: bold;
+		}
+	}
+
+	&__tabs-list {
+		display: flex;
+		align-items: center;
+		background-color: $alebaster;
+		margin-bottom: 30px;
+
+		@media (max-width: 768px) {
+			flex-direction: column;
+		}
+	}
+
+	&__tabs-link {
+		font-size: rem(16);
+		text-transform: uppercase;
+		color: $very-dark-grayish-pink;
+		padding: 1.25em .94em;
+		transition: all .2s ease-in;
+
+		@media (max-width: 1440px) {
+			font-size: rem(13);
+		}
+
+		&:hover {
+			background-color: $mine-shaft-51;
+			color: $white;
+		}
+	}
+
+	&__tabs-detail {
+		margin-left: .94em;
+
+		@media (max-width: 1440px) {
+			margin-left: 0em;
+		}
+	}
+}
+
+

@@ -1,0 +1,19 @@
+.search-form {
+	position: relative;
+
+	&__field {
+		padding: 8px;
+		border: 1px solid #e7e7e7;
+		outline: none;
+		color: #989898;
+		font-family: $font-stack;
+		width: 190px;
+	}
+
+	&__icon {
+		color: #989898;
+		position: absolute;
+		top: 8px;
+		right: 8px;
+	}
+}

@@ -1,0 +1,106 @@
+.top-line {
+	background-color: $mine-shaft-51;
+
+	&__container {
+		max-width: 1170px;
+		width: 100%;
+		@include auto;
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		font-size: .8125rem;
+		padding: 0 20px;
+
+		@media (max-width: 440px) {
+			justify-content: center;
+		}
+	}
+
+	&__link {
+		padding: 1.15em;
+		color: $dusty-gray;
+		transition: all .2s linear;
+	
+		&:hover {
+			background-color: $pure-cuan;
+			color: $white;
+		}
+	}
+}
+
+//* Блок с выбором валюты  *//
+.currency {
+
+	@media (max-width: 440px) {
+		width: 100%;
+		text-align: center;
+	}
+
+	&__container {
+		position: relative;
+		display: inline-block;
+	}
+	
+	&__title,
+	&__select,
+	&__arrow {
+		color: #777;
+	}
+
+	&__select {
+		cursor:pointer;
+  	background-color: transparent;
+		border: 0;
+		outline: none;
+		padding: 1.10em 1.50em 1.10em 0;
+		-webkit-appearance: none; 
+		-moz-appearance: none;
+		text-transform: uppercase;
+	}
+
+	&__arrow {
+		position: absolute;
+		top: 16px;
+		right: 0;
+	}
+}
+
+//* Блок с регистрацией/входом пользователя*//
+.user-login {
+
+	&--margin-left {
+		margin-left: auto;
+
+		@media (max-width: 440px) {
+			margin-left: 0;
+		}
+	}
+
+	&__link {
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	&__item {
+		display: inline-block;
+	}
+}
+
+//* Корзина пользователя *//
+.shopping-cart {
+
+	&--margin-left {
+		margin-left: 60px;
+
+		@media (max-width: 768px) {
+			margin-left: 0px;
+		}
+	}
+
+	&__icon {
+		margin-right: 1.2em;
+	}
+}
+

@@ -1,0 +1,98 @@
+.lookbook {
+	//* Контенир *//
+	&__conteiner {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 124px;
+
+		@media (max-width: 768px) {
+			flex-direction: column;
+			align-items: center;
+			justify-content: initial;
+		}
+	}
+	//* Блок с контентом *//
+	&__item {
+		width: 33%;
+		background-color: $alebaster;
+		padding: 90px 35px 20px 20px;
+		text-align: right;
+		align-items: center;
+		display: flex;
+
+		@media (max-width: 1370px) {
+			padding-top: 35px;
+			padding-right: 20px;
+			flex-direction: column;
+			text-align: center;
+		}
+
+		@media (max-width: 768px) {
+			width: 90%;
+			margin-bottom: 20px;
+
+			&:last-child {
+				margin-bottom: 0px;
+			}
+		}
+	}
+	//* Контент *//
+	&__item-content {
+		max-width: 310px;
+		display: inline-block;
+
+		@media (max-width: 1370px) {
+			max-width: 100%;
+		}
+	}
+	//* Позиционирование картинки *//
+	&__image {
+		margin-bottom: -20px;
+		margin-right: 20px;
+		width: 237px;
+
+		@media (max-width: 1370px) {
+			margin-bottom: 20px;
+			margin-right: 0px;
+			width: 100%;
+			text-align: center;
+
+			.img {
+				display: inline-block;
+			}
+		}
+	}
+	//* Заголовок *//
+	&__title {
+		//* Уменьшаем жирность заголовка и делаем во всю ширину *//
+		&--weight {
+			font-weight: normal;
+			display: block;
+		}
+
+		@media (max-width: 1600px) {
+			font-size: rem(32);
+		}
+	}
+	//* Текст с описанием *//
+	&__description {
+		color: $dove-gray;
+		margin-top: 0;
+		margin-bottom: 1.67em;
+
+		@media (max-width: 1370px) {
+			font-size: 0.8375rem;
+    	line-height: 1.267;
+		}
+	}
+	//* Кнопка *//
+	&__btn {
+		font-size: rem(16);
+		font-weight: bold;
+
+		@media (max-width: 1600px) {
+			font-size: rem(13);
+		}
+	}
+}
+

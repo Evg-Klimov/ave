@@ -1,0 +1,42 @@
+.header {
+
+	&__content {
+		display: flex;
+		align-items: center;
+		position: relative;
+		max-width: 1770px;
+		padding: 0 20px;
+		@include auto;
+
+		@media (max-width: 1440px) {
+			padding: 1.2em;
+			justify-content: space-between;
+		}
+
+		@media (max-width: 768px) {
+			flex-direction: column;
+		}
+	}
+
+	&__link {
+		text-transform: uppercase;
+		color: $mine-shaft-34;
+	}
+}
+
+.logo {
+	@include font-size(24);
+
+	&__link {
+		&--weight {
+			font-weight: bold;
+		}
+	}
+
+	@media (max-width: 768px) {
+		margin-bottom: 10px;
+	}
+}
+
+
+

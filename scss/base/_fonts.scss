@@ -1,0 +1,26 @@
+@import "app/scss/helpers/mixin";
+
+@include font-face(
+  "Montserrat",
+  "../fonts/montserrat/montserrat-bold-webfont/montserrat-bold-webfont",
+  bold
+);
+
+@include font-face(
+  "Montserrat",
+  "../fonts/montserrat/montserrat-italic-webfont/montserrat-italic-webfont",
+  italic
+);
+
+@include font-face(
+  "Montserrat",
+  "../fonts/montserrat/montserrat-medium-webfont/montserrat-medium-webfont"
+);
+
+@include font-face(
+  "Roboto",
+  "../fonts/roboto/roboto_regular_macroman/Roboto-Regular-webfont"
+);
+
+
+
